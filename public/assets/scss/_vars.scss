@@ -1,0 +1,16 @@
+$yellow: #FFE600;
+$dark-gray: #333333;
+$medium-gray: #666666;
+$soft-gray: #999999;
+$light-gray: #EEEEEE;
+$blue: #3483FA;
+
+$logo: '/assets/img/Logo_ML.png';
+
+@mixin text-size($size) {
+    font-size: #{$size}px !important;
+}
+
+@mixin thumbnail-image {
+    
+}
