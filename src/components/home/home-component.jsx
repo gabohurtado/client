@@ -13,11 +13,6 @@ import NavbarComponent from '../navbar/navbar.component'
 class HomeComponent extends Component {
     constructor(props){
         super(props)
-
-        // console.log(this.props);
-        // console.log('Home', this.props.location.search);
-        
-        
     }
 
     componentWillReceiveProps(newProps){
@@ -40,14 +35,13 @@ class HomeComponent extends Component {
         )
 
         const error = this.props.error?(
-            <span>Error : this.props.error</span>
+            <span className="text-red">Error : this.props.error</span>
         ):(
             <span></span>
         )
 
         return (
             <div>
-                <h1 className="text-white">Home</h1>
                 <ul>
                     {items}
                 </ul>

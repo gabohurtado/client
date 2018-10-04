@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, Switch } from 'react-router-dom'
+import { Router } from 'react-router-dom'
 
 import history from './history';
 
@@ -8,20 +8,17 @@ import history from './history';
 import { Provider } from 'react-redux';
 import store from './store/store'
 
-import './index.css';
-import App from './App';
+import './index.scss';
 import * as serviceWorker from './serviceWorker';
-import homeComponent from './components/home/home-component';
-import itemDetailsComponent from './components/item-details/item-details.component';
 import routes from './routes';
-import navbarComponent from './components/navbar/navbar.component';
+import NavbarComponent from './components/navbar/navbar.component';
 
 ReactDOM.render(
     <Provider store={store}>
         <Router history={history}>
             <div className="App">
                 <header className="App-header">
-                    <navbarComponent/>
+                    <NavbarComponent/>
                     {routes}
                 </header>
             </div>

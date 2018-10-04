@@ -29,13 +29,13 @@ class ItemDetailComponent extends Component {
         // Item details
         const item = this.props.item.item ? (
             <div>
-                <span className="text-white">{this.props.item.item.title}</span>
+                <span>{this.props.item.item.title}</span>
             </div>
         ) : (<span></span>)
 
         //Error
         const error = this.props.error ? (
-            <span>Error : this.props.error</span>
+            <span className="text-red">Error : this.props.error</span>
         ) : (
                 <span></span>
             )
