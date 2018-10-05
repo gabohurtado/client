@@ -9,6 +9,9 @@ import history from '../../history'
 import { connect } from 'react-redux'
 import { showDetails } from '../../store/actions/products.actions'
 
+// SCSS
+import './item-details.scss'
+
 class ItemDetailComponent extends Component {
     constructor(props) {
         super(props)
@@ -27,25 +30,65 @@ class ItemDetailComponent extends Component {
 
     render() {
         // Item details
+
         const item = this.props.item.item ? (
-            <div>
-                <span>{this.props.item.item.title}</span>
+            console.log(this.props.item.item),
+            <div className="row container-details">
+                <div className="image col-md-9 col-sm-8">
+                    <span>
+                        <img src={this.props.item.item.picture} alt="Image" />
+                    </span>
+                </div>
+                <div className="details col-md-3 col-sm-4">
+                    <div>
+                        <span>{this.props.item.item.condition}</span> - <span>{this.props.item.item.sold_quantity} vendidos</span>
+                    </div>
+                    <div>
+                        <h5 className="title">{this.props.item.item.title}</h5>
+                    </div>
+                    <div>
+                        <h3 className="price">${this.props.item.price.amount}</h3>
+                    </div>
+                    <button type="button" className="btn btn-primary btn-lg btn-block">Comprar</button>
+                </div>
+                <div className="col-md-12 description-container">
+                    <span className="product-description">Descripción del producto</span>
+                    <p className="text-justify">{this.props.item.item.description}</p>
+                </div>
             </div>
         ) : (<span></span>)
 
         //Error
-        const error = this.props.error ? (
-            <span className="text-red">Error : this.props.error</span>
+        const error = this.props.error != '' ? (
+            <div className="d-flex justify-content-center">
+                <span className="text-danger">
+                    {this.props.error}
+                </span>
+            </div>
         ) : (
                 <span></span>
             )
 
         const loading = this.props.loading ? (
-            <span>loading...</span>
+            <div className="row container-details-loading">
+                <div className="image col-md-9 col-sm-8">
+                </div>
+                <div className="details col-md-3 col-sm-4">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div className="col-md-12 description-container">
+                    <div className="product-description"></div>
+                    <p className="text-justify"></p>
+                </div>
+            </div>
         ) : (
                 item
             )
-        console.log('Await', item);
+        // console.log('Await', item);
 
         return (
             <div>
@@ -58,6 +101,7 @@ class ItemDetailComponent extends Component {
 ItemDetailComponent.propTypes = {
     item: PropTypes.object.isRequired,
     loading: PropTypes.bool,
+    error: PropTypes.string,
     showDetails: PropTypes.func
 }
 

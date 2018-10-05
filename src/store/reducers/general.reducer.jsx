@@ -5,7 +5,7 @@ const initialState = {
 }
 
 export default (state=initialState, action) => {
-    console.log('General Action', action);
+    // console.log('General Action', action);
     
     switch (action.type){
         case START_LOADING:

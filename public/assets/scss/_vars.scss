@@ -2,6 +2,7 @@ $yellow: #FFE600;
 $dark-gray: #333333;
 $medium-gray: #666666;
 $soft-gray: #999999;
+$loading-gray: #dadada;
 $light-gray: #EEEEEE;
 $blue: #3483FA;
 $white: #FFFFFF;
@@ -13,5 +14,13 @@ $logo: '/assets/img/Logo_ML.png';
 }
 
 @mixin thumbnail-image {
-    
+    width: 180px;
+    height: 180px;
+    border-radius: 4px;
 }
+
+$space1: 16px !important;
+$space2: 32px !important;
+
+// Font-Awesome
+$fa-font-path:        "/assets/fontawesome/webfonts";

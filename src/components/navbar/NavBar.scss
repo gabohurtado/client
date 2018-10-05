@@ -1,8 +1,33 @@
 // My vars
 @import 'public/assets/scss/_vars';
 
+@import "public/assets/fontawesome/scss/fontawesome.scss";
+@import "public/assets/fontawesome/scss/solid.scss";
+@import "public/assets/fontawesome/scss/brands.scss";
+
 nav {
     background-color: $yellow;
+
+    form {
+        button {
+            @extend %fa-icon;
+            @extend .fas;
+
+            &:after {
+                @include text-size(25);
+                content: fa-content($fa-var-search);
+                color: $soft-gray;
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            position: relative;
+            right: 40px;
+            border-left: solid 1px $soft-gray !important;
+        }
+    }
 
     a.navbar-brand {
         background: url($logo) no-repeat;
@@ -10,8 +35,27 @@ nav {
         height: 37px;
         margin-right: 0;
     }
+
+    nav.breadcrumb a,
+    li.breadcrumb-item {
+        @include text-size(14);
+    }
+
+    ol.breadcrumb {
+        padding: $space1;
+    }
 }
 
 input {
     @include text-size(18);
+}
+
+
+button.nav-search-btn,
+button.nav-search-btn:focus {
+    background: none;
+    height: 39px;
+    padding-top: 2px;
+    cursor: pointer;
+    border: none;
 }
