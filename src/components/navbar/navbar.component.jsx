@@ -6,6 +6,7 @@ import "./NavBar.scss";
 import history from "../../history";
 import BreadcrumbComponent from "../breadcrumb/breadcrumb.component";
 
+// Internationalization
 import { FormattedMessage,  } from 'react-intl';
 
 class NavbarComponent extends Component {

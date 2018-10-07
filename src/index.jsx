@@ -14,7 +14,7 @@ import routes from './routes';
 import NavbarComponent from './components/navbar/navbar.component';
 
 // Internationalization
-import { FormattedMessage, IntlProvider } from 'react-intl';
+import { IntlProvider } from 'react-intl';
 import { addLocaleData } from 'react-intl';
 import * as en from "react-intl/locale-data/en";
 import * as es from "react-intl/locale-data/es";
