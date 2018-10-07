@@ -7,7 +7,10 @@ $light-gray: #EEEEEE;
 $blue: #3483FA;
 $white: #FFFFFF;
 
+$radio: 4px;
+
 $logo: '/assets/img/Logo_ML.png';
+$logo_home: '/assets/img/wp-image-448382072.png';
 
 @mixin text-size($size) {
     font-size: #{$size}px !important;
@@ -19,8 +22,8 @@ $logo: '/assets/img/Logo_ML.png';
     border-radius: 4px;
 }
 
-$space1: 16px !important;
-$space2: 32px !important;
+$space1: 16px;
+$space2: 32px;
 
 // Font-Awesome
 $fa-font-path:        "/assets/fontawesome/webfonts";

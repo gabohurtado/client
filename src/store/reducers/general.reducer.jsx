@@ -1,13 +1,11 @@
 import { START_LOADING, END_LOADING } from '../actions/types'
 
 const initialState = {
-    loading: false
+    loading: false,
 }
 
-export default (state=initialState, action) => {
-    // console.log('General Action', action);
-    
-    switch (action.type){
+export default (state = initialState, action) => {
+    switch (action.type) {
         case START_LOADING:
             return {
                 ...state,

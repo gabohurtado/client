@@ -36,14 +36,6 @@ nav {
         margin-right: 0;
     }
 
-    nav.breadcrumb a,
-    li.breadcrumb-item {
-        @include text-size(14);
-    }
-
-    ol.breadcrumb {
-        padding: $space1;
-    }
 }
 
 input {
@@ -54,8 +46,8 @@ input {
 button.nav-search-btn,
 button.nav-search-btn:focus {
     background: none;
-    height: 39px;
-    padding-top: 2px;
+    height: 30px;
+    margin-top: 4px;
     cursor: pointer;
     border: none;
 }

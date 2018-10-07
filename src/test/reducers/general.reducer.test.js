@@ -37,8 +37,5 @@ describe('General Reducer', () => {
         }
 
         assert.deepEqual(configuration(state, action), expected)
-
-
     })
-
 })

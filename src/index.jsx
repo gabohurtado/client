@@ -18,7 +18,7 @@ ReactDOM.render(
         <Router history={history}>
             <div className="App">
                 <header className="App-header">
-                    <NavbarComponent />
+                    <NavbarComponent/>
                 </header>
                 <div className="container col-md-10">
                     {routes}
