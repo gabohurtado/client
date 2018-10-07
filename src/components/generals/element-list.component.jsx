@@ -12,18 +12,11 @@ class ElementListComponent extends Component {
                     <div className="thumbnail col-md-2">
                     </div>
                     <div className="media-body col-md-8">
+                        {/* eslint-disable-next-line */}
                         <h5 className="price"></h5>
+                        {/* eslint-disable-next-line */}
                         <h5 className="price"></h5>
-                        <h5 className="price"></h5>
-                    </div>
-                    <div className="place col-md-2 col-md-2"></div>
-                </div>
-                <div className="media-loading row">
-                    <div className="thumbnail col-md-2">
-                    </div>
-                    <div className="media-body col-md-8">
-                        <h5 className="price"></h5>
-                        <h5 className="price"></h5>
+                        {/* eslint-disable-next-line */}
                         <h5 className="price"></h5>
                     </div>
                     <div className="place col-md-2 col-md-2"></div>
@@ -32,15 +25,31 @@ class ElementListComponent extends Component {
                     <div className="thumbnail col-md-2">
                     </div>
                     <div className="media-body col-md-8">
+                        {/* eslint-disable-next-line */}
                         <h5 className="price"></h5>
+                        {/* eslint-disable-next-line */}
                         <h5 className="price"></h5>
+                        {/* eslint-disable-next-line */}
+                        <h5 className="price"></h5>
+                    </div>
+                    <div className="place col-md-2 col-md-2"></div>
+                </div>
+                <div className="media-loading row">
+                    <div className="thumbnail col-md-2">
+                    </div>
+                    <div className="media-body col-md-8">
+                        {/* eslint-disable-next-line */}
+                        <h5 className="price"></h5>
+                        {/* eslint-disable-next-line */}
+                        <h5 className="price"></h5>
+                        {/* eslint-disable-next-line */}
                         <h5 className="price"></h5>
                     </div>
                     <div className="place col-md-2 col-md-2"></div>
                 </div>
             </div>
         ) : this.props.result.items ? this.props.result.items.map(item => (
-                <NavLink to={`/item/${item.id}`} className="no-styles-link">
+                <NavLink key={item.id} to={`/item/${item.id}`} className="no-styles-link">
                     <div className="media" key={item.id}>
                         <span className="thumbnail">
                             <img src={item.picture} alt="item.title" />
