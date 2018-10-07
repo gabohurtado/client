@@ -13,17 +13,29 @@ import * as serviceWorker from './serviceWorker';
 import routes from './routes';
 import NavbarComponent from './components/navbar/navbar.component';
 
+// Internationalization
+import { FormattedMessage, IntlProvider } from 'react-intl';
+import { addLocaleData } from 'react-intl';
+import * as en from "react-intl/locale-data/en";
+import * as es from "react-intl/locale-data/es";
+import languages from './i18n/languages'
+
+addLocaleData(es);
+addLocaleData(en);
+
 ReactDOM.render(
     <Provider store={store}>
         <Router history={history}>
-            <div className="App">
-                <header className="App-header">
-                    <NavbarComponent/>
-                </header>
-                <div className="container col-md-10">
-                    {routes}
+            <IntlProvider locale="es" messages={languages['es']}>
+                <div className="App">
+                    <header className="App-header">
+                        <NavbarComponent />
+                    </header>
+                    <div className="container col-md-10">
+                        {routes}
+                    </div>
                 </div>
-            </div>
+            </IntlProvider>
         </Router>
     </Provider>
     , document.getElementById('root'));

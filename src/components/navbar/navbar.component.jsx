@@ -6,6 +6,8 @@ import "./NavBar.scss";
 import history from "../../history";
 import BreadcrumbComponent from "../breadcrumb/breadcrumb.component";
 
+import { FormattedMessage,  } from 'react-intl';
+
 class NavbarComponent extends Component {
     constructor(props) {
         super(props);
@@ -19,7 +21,7 @@ class NavbarComponent extends Component {
     }
 
     render() {
-            
+
         return (
             <div>
                 <nav className="navbar navbar-expand-lg d-flex justify-content-center row">
@@ -27,12 +29,16 @@ class NavbarComponent extends Component {
                     <form className="col-md-9" onSubmit={this.handleSubmit}>
                         <div className="">
                             <div className="col-md-12 d-flex">
+                            <FormattedMessage id="search.input">
+                            { placeholder =>
                                 <input
                                     type="text"
                                     className="form-control"
-                                    placeholder="Nunca dejes de buscar"
+                                    placeholder={placeholder}
                                     autoFocus
                                 />
+                            }
+                            </FormattedMessage>
                                 <button type="submit" className="nav-search-btn">
                                 </button>
                             </div>
