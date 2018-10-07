@@ -43,7 +43,7 @@ class ElementListComponent extends Component {
                 <NavLink to={`/item/${item.id}`} className="no-styles-link">
                     <div className="media" key={item.id}>
                         <span className="thumbnail">
-                            <img src={item.picture} alt="Generic placeholder image" />
+                            <img src={item.picture} alt="item.title" />
                         </span>
                         <div className="media-body">
                             <h5 className="price">${item.price.amount}</h5>
