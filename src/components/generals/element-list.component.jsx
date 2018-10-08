@@ -6,6 +6,7 @@ import './element-list.component.scss'
 
 class ElementListComponent extends Component {
     render() {
+
         const items = this.props.loading ? (
             <div>
                 <div className="media-loading row">
@@ -55,7 +56,7 @@ class ElementListComponent extends Component {
                             <img src={item.picture} alt="item.title" />
                         </span>
                         <div className="media-body">
-                            <h5 className="price">${item.price.amount}</h5>
+                            <h5 className="price">${item.price.amount} </h5><span className={item.free_shipping?'shipping':''}></span>
                             <h4 className="title">{item.title}</h4>
                         </div>
                         <span className="place col-md-2">{item.address_state}</span>

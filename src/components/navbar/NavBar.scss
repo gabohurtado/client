@@ -1,21 +1,13 @@
 // My vars
 @import 'public/assets/scss/_vars';
 
-@import "public/assets/fontawesome/scss/fontawesome.scss";
-@import "public/assets/fontawesome/scss/solid.scss";
-@import "public/assets/fontawesome/scss/brands.scss";
-
 nav {
     background-color: $yellow;
 
     form {
         button {
-            @extend %fa-icon;
-            @extend .fas;
-
             &:after {
                 @include text-size(25);
-                content: fa-content($fa-var-search);
                 color: $soft-gray;
             }
 
@@ -23,9 +15,17 @@ nav {
                 outline: none;
             }
 
+            background: url($icon_search) no-repeat 10px $light-gray;
             position: relative;
             right: 40px;
             border-left: solid 1px $soft-gray !important;
+
+            height: 30px;
+            margin-top: 4px;
+            cursor: pointer;
+            border: none;
+            width: 35px;
+            border-radius: 0 4px 4px 0;
         }
     }
 
@@ -40,14 +40,4 @@ nav {
 
 input {
     @include text-size(18);
-}
-
-
-button.nav-search-btn,
-button.nav-search-btn:focus {
-    background: none;
-    height: 30px;
-    margin-top: 4px;
-    cursor: pointer;
-    border: none;
 }

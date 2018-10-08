@@ -13,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <div id="logo" className="d-flex justify-content-center">
-        <img src="/assets/img/wp-image-448382072.png" alt="Logo"/>
+        <img src="/assets/img/logo.png" alt="Mercado libre App"/>
       </div>
     );
   }

@@ -11,6 +11,8 @@ $radio: 4px;
 
 $logo: '/assets/img/Logo_ML.png';
 $logo_home: '/assets/img/wp-image-448382072.png';
+$shipping: '/assets/img/ic_shipping.png';
+$icon_search: '/assets/img/ic_Search.png';
 
 @mixin text-size($size) {
     font-size: #{$size}px !important;

@@ -17,6 +17,14 @@
         h5.price {
             @include text-size(24);
             margin-bottom: $space2;
+            display: inline-block;
+        }
+        .shipping {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url($shipping) no-repeat;
+            margin-left: 5px;
         }
     }
 
