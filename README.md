@@ -1,10 +1,14 @@
 ### Gabo Hurtado
 [gabohurtado1991@gmail.com](mailto:gabohurtado1991@gmail.com)
 
-  * Steps to run the apps  
-    `cd server && npm install && npm start`  
-    `cd client && npm install && npm start`  
+    NOTE: These syntaxes run from the directory where this README is located
+
+  * Necesary package
+    `npm i -g http-server`
+
+  * Build client app
+    `npm install && npm run build && http-server build -p 3000 -S -C cert.pem -o`
+
 
   * Steps to test the apps  
-    `cd server && npm run test`  
-    `cd client && npm run test`
+    `npm run test`
