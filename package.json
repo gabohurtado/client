@@ -78,7 +78,7 @@
   ],
   "devDependencies": {
     "chai": "^4.2.0",
-    "enzyme": "^3.6.0",
+    "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.5.0",
     "node-sass": "^4.9.3",
     "redux-devtools": "^3.4.1",

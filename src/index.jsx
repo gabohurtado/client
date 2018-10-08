@@ -24,9 +24,9 @@ addLocaleData(es);
 addLocaleData(en);
 
 ReactDOM.render(
-    <Provider store={store}>
-        <Router history={history}>
-            <IntlProvider locale="es" messages={languages['es']}>
+    <IntlProvider locale="es" messages={languages['es']}>
+        <Provider store={store}>
+            <Router history={history}>
                 <div className="App">
                     <header className="App-header">
                         <NavbarComponent />
@@ -35,9 +35,9 @@ ReactDOM.render(
                         {routes}
                     </div>
                 </div>
-            </IntlProvider>
-        </Router>
-    </Provider>
+            </Router>
+        </Provider>
+    </IntlProvider>
     , document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
